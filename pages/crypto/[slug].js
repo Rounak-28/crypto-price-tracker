@@ -32,7 +32,6 @@ const Slug = () => {
         data={{
           labels: historicalData?.data?.history.map((item) => {
             let date = new Date(item.timestamp * 1000);
-            // let time = `${date.getHours()}:${date.getMinutes()}`
             return date.toLocaleDateString();
           }),
 
