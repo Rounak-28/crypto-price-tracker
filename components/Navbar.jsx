@@ -73,6 +73,7 @@ const Navbar = (props) => {
       <a
         href={"https://github.com/Rounak-28/crypto-price-tracker"}
         target="_blank"
+        rel="noopener noreferrer"
         className="absolute right-14 md:right-10 text-3xl cursor-pointer"
       >
         <AiFillGithub />
