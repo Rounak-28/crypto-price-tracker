@@ -8,14 +8,15 @@ const Slug = () => {
   const { slug } = router.query;
   const [historicalData, setHistoricalData] = useState([]);
 
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
-      "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
-    },
-  };
   useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
+        "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+      },
+    };
+
     fetch(
       `https://coinranking1.p.rapidapi.com/coin/${slug}/history?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=1y`,
       options

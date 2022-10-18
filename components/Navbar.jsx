@@ -38,10 +38,11 @@ const Navbar = (props) => {
         <img
           src="/logo-white.png"
           className="h-6 absolute left-8 hidden dark:block"
+          alt=""
         />
       </Link>
       <Link href={"/"}>
-        <img src="/logo-blue.png" className="h-6 absolute left-8 dark:hidden" />
+        <img src="/logo-blue.png" className="h-6 absolute left-8 dark:hidden" alt="" />
       </Link>
       <div className="hidden md:block">
         <ul className="flex space-x-8">

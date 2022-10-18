@@ -22,6 +22,7 @@ const NewsCard = (props) => {
                 (item) => item?.image?.thumbnail?.contentUrl
               )}
               className="w-6 h-6 rounded-full"
+              alt=""
             />
             <p>{props.provider?.map((item) => item?.name)}</p>
           </div>

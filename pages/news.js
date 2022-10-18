@@ -5,15 +5,16 @@ import NewsCard from "../components/NewsCard";
 const News = () => {
   const [newsData, setNewsData] = useState([]);
 
-  const options = {
-    method: "GET",
-    headers: {
-      "X-BingApis-SDK": "true",
-      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
-      "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
-    },
-  };
   useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        "X-BingApis-SDK": "true",
+        "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
+        "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
+      },
+    };
+
     fetch('https://bing-news-search1.p.rapidapi.com/news/search?q=cryptocurrency&freshness=Day&textFormat=Raw&safeSearch=Off', options)
       .then(response => response.json())
       .then(response => setNewsData(response))
