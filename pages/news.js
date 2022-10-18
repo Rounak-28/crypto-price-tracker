@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import NewsCard from "../components/NewsCard";
 
-const news = () => {
+const News = () => {
   const [newsData, setNewsData] = useState([]);
 
   const options = {
@@ -24,11 +24,11 @@ const news = () => {
     <div className="w-[100vw] flex justify-center -z-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-8 mb-10">
         {newsData?.value?.map((item) => {
-          return <NewsCard {...item} />;
+          return <NewsCard {...item} key={item.name}/>;
         })}
       </div>
     </div>
   );
 };
 
-export default news;
+export default News;

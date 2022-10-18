@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import CoinCard from "../components/CoinCard";
 
-const cryptocurrencies = () => {
+const Cryptocurrencies = () => {
   const [coinData, setCoinData] = useState([]);
 
   const options = {
@@ -26,11 +26,11 @@ const cryptocurrencies = () => {
     <div className="w-[100vw] flex justify-center">
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
         {coinData?.coins?.map((item) => {
-          return <CoinCard {...item} />;
+          return <CoinCard {...item} key={item.uuid} />;
         })}
       </div>
     </div>
   );
 };
 
-export default cryptocurrencies;
+export default Cryptocurrencies;

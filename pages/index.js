@@ -57,7 +57,7 @@ export default function Home() {
       </div>
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mb-10">
         {coinData?.coins?.map((item) => {
-          return <CoinCard {...item} />;
+          return <CoinCard {...item} key={item.uuid}/>;
         })}
       </div>
     </div>

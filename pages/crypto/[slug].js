@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
 import { Line } from "react-chartjs-2";
 
-const slug = () => {
+const Slug = () => {
   const router = useRouter();
   const { slug } = router.query;
   const [historicalData, setHistoricalData] = useState([]);
@@ -55,4 +55,4 @@ const slug = () => {
   );
 };
 
-export default slug;
+export default Slug;
