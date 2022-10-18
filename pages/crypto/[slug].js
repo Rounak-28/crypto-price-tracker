@@ -25,7 +25,6 @@ const Slug = () => {
       .then((response) => setHistoricalData(response))
       .catch((err) => console.error(err));
   }, []);
-  console.log(historicalData);
   return (
     <div className="w-[100vw] h-[100vh]">
       <Line
