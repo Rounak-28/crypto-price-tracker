@@ -24,6 +24,8 @@ const Slug = () => {
       .then((response) => response.json())
       .then((response) => setHistoricalData(response))
       .catch((err) => console.error(err));
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   console.log(historicalData);
   return (
